@@ -1,0 +1,2 @@
+# edbglobals
+main page
