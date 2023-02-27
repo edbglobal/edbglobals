@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bootstrap demo</title>
+   <!-- css style link -->
+   <link rel="stylesheet" href="style2.css">
+   <link rel="stylesheet" href="css/utility.css">
+   <link rel="stylesheet" href="css/owl.theme.green.css">
+   <link rel="stylesheet" href="css/owl.carousel.css">
+   <script src="js/javas.js"></script>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <!-- Search bar hover -->
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="background-color: rgb(4, 4, 37);">
+	<!-- Navbar Of EDB Start -->
+	<nav class="navbar navbar-expand-lg bg-grey1 pb-3 pt-3">
+		<div class="container-fluid ">
+		   <a class="navbar-brand d-flex" href="index2.html">
+			  <img src="images/logo.jpg" alt="" height="50px" width="60px">
+			  <span class="text-white" style="font-size: 14px;"><span>EDB Global<br>Consulting </span></span>
+		   </a>
+		   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+		   </button>
+		   <div class="collapse navbar-collapse ps-3 " id="navbarSupportedContent">
+			  
+			  <div class="collapse navbar-collapse contact " id="navbarSupportedContent">
+				 <ul class="navbar-nav ms-auto mb-2 ">
+					<li class="nav-item pe-2">
+					   <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+					</li>
+					<li class="nav-item">
+					   <a class="nav-link " href="#">About Us</a>
+					</li>
+				 </ul>
+				 <div class="box pe-4">
+					
+				 </div>
+				 <form class="d-flex">
+					<a href=""><img src="images/logo-tata.svg" alt=""></a>
+				 </form>
+			  </div>
+		   </div>
+	 </nav>
+	 <!-- Navbar Of EDB Ends -->
+
+
+	<!-- full Title -->
+	<div class="full-title">
+		<div class="container">
+			<!-- Page Heading/Breadcrumbs -->
+			<h1 class="mt-4 mb-3 text-white"> Contact </h1>
+			<div class="breadcrumb-main">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="index.html" class="text-white">Home</a>
+					</li>
+					<li class="breadcrumb-item active text-white" >Contact</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+    <div class="contact-main">
+		<div class="container">
+			<!-- Content Row -->
+		  <div class="row">
+			<!-- Map Column -->
+				<div class="col-lg-8 mb-4 contact-left">
+					<h3 class="text-white">Send us a Message</h3>
+					<form action="" name="submit-to-google-sheet" id="contactForm" novalidate method="POST">
+						<div class="control-group form-group mt-3">
+							<div class="controls">
+								<input type="text" placeholder="Full Name" class="form-control" name="Name" id="name" required data-validation-required-message="Please enter your name.">
+								<p class="help-block"></p>
+							</div>
+						</div>
+						<div class="control-group form-group mt-3">
+							<div class="controls">
+								<input type="tel" placeholder="Phone Number" class="form-control" name="Phone" id="phone" required data-validation-required-message="Please enter your phone number.">
+							</div>
+						</div>
+						<div class="control-group form-group mt-3">
+							<div class="controls">
+								<input type="email" placeholder="Email Address" class="form-control" name="Email" id="email" required data-validation-required-message="Please enter your email address.">
+							</div>
+						</div>
+						<div class="control-group form-group mt-3">
+							<div class="controls">
+								<textarea rows="5" cols="100" placeholder="Message" class="form-control" name="Message" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+							</div>
+						</div>
+						<div id="success"></div>
+						<!-- For success/fail messages -->
+						<input type="submit" name="submit" id="">
+					</form>
+				</div>
+				<script>
+					const scriptURL = 'https://script.google.com/macros/s/AKfycbxnqx09o8SieuFF0PlYILVbB9KPcftuBzRi0sDVZr76rJpZZJliNWE4pCLppBHzf_eT/exec'
+					const form = document.forms['submit-to-google-sheet']
+				  
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => window.location.href = "https://www.google.co.in")
+						.catch(error => console.error('Error!', error.message))
+						alert("Thanks for Contacting us..! We will Contact you soon")
+					})
+				  </script>
+				<!-- Contact Details Column -->
+				<div class="col-lg-4 mb-4 contact-right text-white">
+					<h3>Contact Details</h3>
+					<p>
+						A10, 19, 1st Floor Above Jawa Showroom Meerut Rd, 
+						Near DPSG, Meerut Road Industrial Area, Ghaziabad, Uttar Pradesh 201002
+						<br>
+					</p>
+					<p>
+						<abbr title="Phone">P</abbr>: +91 8178914539
+					</p>
+					<p>
+						<abbr title="Email">E</abbr>:
+						<a href="mailto:name@example.com"> edbglobalconsulting@gmail.com </a>
+					</p>
+					<p>
+						<abbr title="Hours">H</abbr>: All seven Day: 9:00 AM to 9:00 PM
+					</p>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	
+	<div class="map-main">
+		<!-- Embedded Google Map -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7000.139761776905!2d77.4339814804802!3d28.687556143744125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1677356238357!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+
+    
+</div>
+
+<!-- footer  -->
+<section class="footer myfooter">
+	<br>
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 footer-contact">
+						<div class="mypic">
+							<!-- <img src="images/mee2.png" alt="" srcset=""> -->
+						</div>
+						<h4 class="text-white">EDB GLOBAL CONSULTING PRIVATE LIMITED</h4>
+						<p class="text-white" style="font-size: 15px;">
+							<!-- G-395,Sumangalam Ansal,<br> -->
+							Near DPS School, Merrut Road<br>
+							Ghaziabad (U.P) India<br><br>
+							<strong class="text-white">Phone:</strong> +91-8368254422<br>
+							<strong class="text-white">Phone:</strong> +91-8178914539<br>
+							<strong class="text-white">Email:</strong>edbglobalconsulting@gmail.com<br>
+						</p>
+						<div id="sfcy5su7j7g178jwn7j1l81wk4zm5fermlt"></div>
+						<br>
+						<script type="text/javascript"
+							src="https://counter7.stat.ovh/private/counter.js?c=y5su7j7g178jwn7j1l81wk4zm5fermlt&down=async"
+							async></script>
+						<noscript><a href="https://www.freecounterstat.com" title="website hit counters"><img
+									src="https://counter7.stat.ovh/private/freecounterstat.php?c=y5su7j7g178jwn7j1l81wk4zm5fermlt"
+									border="0" title="website hit counters"
+									alt="website hit counters"></a></noscript>
+					</div>
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4 class="text-white">Quick Intro</h4>
+						<p style="color: #fff;">EDB Global Consulting is a consulting firm that collaborates with business and society to overcome their obstacles and capture their greatest opportunities by providing the best solutions.</p>
+					</div>
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4 class="text-white">Send Query</h4>
+						<ul>
+							<li class="nav-item">
+								<a class="nav-link" style="color: #ffffff;" href="contact.html"><i
+										class="fa fa-envelope-o" aria-hidden="true"></i>Query Form</a>
+							</li>
+
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-6 footer-links">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.055731430819!2d77.43224278065402!3d28.68797943110011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1b7b4e2e6ff%3A0xdf20d4ddc17dc39c!2sJawa%20Yezdi%20ghaziabad%20(EV%20TRADES)!5e0!3m2!1sen!2sin!4v1677356340747!5m2!1sen!2sin" width="100%" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="container d-md-flex py-4 socialsection">
+				<!-- <div class="mr-md-auto text-center text-md-left">
+<div class="copyright text-white" style="font-size: 10px;">
+&copy; Copyright <strong><span>company</span></strong>All Rights Reserved
+</div>
+<div class="credits text-white">
+Designed & Developed by <a href="https://www.instagram.com/akshay_agg_boxer/">Agranshu (Slanzapanika)</a>
+</div>
+
+</div> -->
+				<div class="social-links d-flex justify-content-evenly"
+					style="display: block; margin-left: auto;margin-right: auto; width: 50%;">
+					<a href="https://www.facebook.com/profile.php?id=100063719576156" class="text-white"> <i
+							class="fa fa-facebook  fa-3x" aria-hidden="true"></i> </a>
+					<a href="https://www.youtube.com/channel/UC0AARz7c1guJR7yMP6nzpYg" class="text-white"> <i
+							class="fa fa-youtube fa-3x" aria-hidden="true"></i></a>
+					<a href="https://www.linkedin.com/in/5g-power-b985a3223/" class="text-white"><i class="fa fa-linkedin fa-3x"
+							aria-hidden="true"></i></a>
+					<a href="https://instagram.com/5gpower.in?utm_medium=copy_link" class="text-white"> <i
+							class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+					<a href="https://twitter.com/5gPower1" class="text-white"><i class="fa fa-twitter fa-3x"
+							aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<div class="container" style="text-align: center; background-color:#ee1d23;">
+				<div class="copyright text-white" style="font-size: 10px;">
+					&copy; Copyright <strong><span>SHREEJEE POWER SYSTEMS LLP</span></strong>All Rights Reserved to
+					SHREEJEE POWER SYSTEMS LLP
+				</div>
+				<div class="credits text-white" style="font-size: 10px;">
+					Designed & Developed by <a href="https://slanzapanika.com/">
+						Slanzapanika</a>
+				</div>
+			</div>
+	</footer>
+	    
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+
+</body>
+
+</html>
